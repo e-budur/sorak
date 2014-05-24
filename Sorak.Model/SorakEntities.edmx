@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SorakModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SorakModelStoreContainer">
+          <EntitySet Name="T_questions" EntityType="SorakModel.Store.T_questions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_subjects" EntityType="SorakModel.Store.T_subjects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_users" EntityType="SorakModel.Store.T_users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_votes" EntityType="SorakModel.Store.T_votes" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_T_questions_T_subjects" Association="SorakModel.Store.FK_T_questions_T_subjects">
+            <End Role="T_subjects" EntitySet="T_subjects" />
+            <End Role="T_questions" EntitySet="T_questions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_questions_T_users" Association="SorakModel.Store.FK_T_questions_T_users">
+            <End Role="T_users" EntitySet="T_users" />
+            <End Role="T_questions" EntitySet="T_questions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_votes_T_questions" Association="SorakModel.Store.FK_T_votes_T_questions">
+            <End Role="T_questions" EntitySet="T_questions" />
+            <End Role="T_votes" EntitySet="T_votes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="T_questions">
+          <Key>
+            <PropertyRef Name="record_num" />
+          </Key>
+          <Property Name="record_num" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="question_text" Type="varchar" MaxLength="500" />
+          <Property Name="instance_id" Type="datetime" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="subject_id" Type="int" Nullable="false" />
+          <Property Name="like_count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_subjects">
+          <Key>
+            <PropertyRef Name="record_num" />
+          </Key>
+          <Property Name="record_num" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="subject_text" Type="varchar" MaxLength="500" />
+          <Property Name="instance_id" Type="datetime" />
+          <Property Name="event_date" Type="varchar" MaxLength="30" />
+          <Property Name="question_count" Type="int" Nullable="false" />
+          <Property Name="status_code" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="T_users">
+          <Key>
+            <PropertyRef Name="record_num" />
+          </Key>
+          <Property Name="record_num" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="email_address_text" Type="varchar" MaxLength="255" />
+          <Property Name="windows_username_text" Type="varchar" MaxLength="255" />
+          <Property Name="name_text" Type="varchar" MaxLength="255" />
+          <Property Name="reference_id" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_votes">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="question_id" />
+          </Key>
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="question_id" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_T_questions_T_subjects">
+          <End Role="T_subjects" Type="SorakModel.Store.T_subjects" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="T_questions" Type="SorakModel.Store.T_questions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_subjects">
+              <PropertyRef Name="record_num" />
+            </Principal>
+            <Dependent Role="T_questions">
+              <PropertyRef Name="subject_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_questions_T_users">
+          <End Role="T_users" Type="SorakModel.Store.T_users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="T_questions" Type="SorakModel.Store.T_questions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_users">
+              <PropertyRef Name="record_num" />
+            </Principal>
+            <Dependent Role="T_questions">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_votes_T_questions">
+          <End Role="T_questions" Type="SorakModel.Store.T_questions" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="T_votes" Type="SorakModel.Store.T_votes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_questions">
+              <PropertyRef Name="record_num" />
+            </Principal>
+            <Dependent Role="T_votes">
+              <PropertyRef Name="question_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SorakModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SorakEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Questions" EntityType="SorakModel.Question" />
+          <EntitySet Name="Users" EntityType="SorakModel.User" />
+          <AssociationSet Name="FK_T_questions_T_users" Association="SorakModel.FK_T_questions_T_users">
+            <End EntitySet="Users" Role="T_users" />
+            <End EntitySet="Questions" Role="Question" />
+          </AssociationSet>
+          <AssociationSet Name="T_votes" Association="SorakModel.T_votes">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="T_users" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="Subjects" EntityType="SorakModel.Subject" />
+          <AssociationSet Name="FK_T_questions_T_subjects" Association="SorakModel.FK_T_questions_T_subjects">
+            <End Role="T_subjects" EntitySet="Subjects" />
+            <End Role="Question" EntitySet="Questions" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="RecordNum" />
+          </Key>
+          <Property Name="RecordNum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="InstanceId" Type="DateTime" />
+          <Property Type="Int32" Name="OwnerUserId" Nullable="false" />
+          <NavigationProperty Name="OwnerUser" Relationship="SorakModel.FK_T_questions_T_users" FromRole="Question" ToRole="T_users" />
+          <NavigationProperty Name="VotingUsers" Relationship="SorakModel.T_votes" FromRole="Question" ToRole="T_users" />
+          <Property Type="Int32" Name="OwnerSubjectId" Nullable="false" />
+          <NavigationProperty Name="OwnerSubject" Relationship="SorakModel.FK_T_questions_T_subjects" FromRole="Question" ToRole="T_subjects" />
+          <Property Type="Int32" Name="LikeCount" DefaultValue="0" Nullable="false" />
+          </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="RecordNum" />
+          </Key>
+          <Property Type="Int32" Name="RecordNum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EmailAddress" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WindowsUsername" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmployeeName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AskedQuestions" Relationship="SorakModel.FK_T_questions_T_users" FromRole="T_users" ToRole="Question" />
+          <NavigationProperty Name="VotedQuestions" Relationship="SorakModel.T_votes" FromRole="T_users" ToRole="Question" />
+          <Property Type="DateTime" Name="LastLoginTime" />
+        </EntityType>
+        <Association Name="FK_T_questions_T_users">
+          <End Type="SorakModel.User" Multiplicity="1" Role="T_users" />
+          <End Type="SorakModel.Question" Multiplicity="*" Role="Question" />
+          <ReferentialConstraint>
+            <Principal Role="T_users">
+              <PropertyRef Name="RecordNum" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="OwnerUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="T_votes">
+          <End Type="SorakModel.Question" Role="Question" Multiplicity="*" />
+          <End Type="SorakModel.User" Role="T_users" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="RecordNum" />
+          </Key>
+          <Property Type="Int32" Name="RecordNum" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Text" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="InstanceId" />
+          <NavigationProperty Name="Questions" Relationship="SorakModel.FK_T_questions_T_subjects" FromRole="T_subjects" ToRole="Question" />
+          <Property Type="String" Name="EventDate" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="QuestionCount" Nullable="false" />
+          <Property Type="String" Name="StatusCode" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_T_questions_T_subjects">
+          <End Type="SorakModel.Subject" Role="T_subjects" Multiplicity="1" />
+          <End Type="SorakModel.Question" Role="Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_subjects">
+              <PropertyRef Name="RecordNum" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="OwnerSubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SorakModelStoreContainer" CdmEntityContainer="SorakEntities">
+          <EntitySetMapping Name="Questions"><EntityTypeMapping TypeName="SorakModel.Question"><MappingFragment StoreEntitySet="T_questions">
+            <ScalarProperty Name="LikeCount" ColumnName="like_count" />
+                <ScalarProperty Name="OwnerSubjectId" ColumnName="subject_id" />
+                <ScalarProperty Name="OwnerUserId" ColumnName="user_id" />
+                <ScalarProperty Name="RecordNum" ColumnName="record_num" />
+            <ScalarProperty Name="Text" ColumnName="question_text" />
+            <ScalarProperty Name="InstanceId" ColumnName="instance_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SorakModel.User">
+              <MappingFragment StoreEntitySet="T_users">
+                <ScalarProperty Name="LastLoginTime" ColumnName="reference_id" />
+                <ScalarProperty Name="EmployeeName" ColumnName="name_text" />
+                <ScalarProperty Name="WindowsUsername" ColumnName="windows_username_text" />
+                <ScalarProperty Name="EmailAddress" ColumnName="email_address_text" />
+                <ScalarProperty Name="RecordNum" ColumnName="record_num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="T_votes" TypeName="SorakModel.T_votes" StoreEntitySet="T_votes">
+            <EndProperty Name="T_users">
+              <ScalarProperty Name="RecordNum" ColumnName="user_id" />
+            </EndProperty>
+            <EndProperty Name="Question">
+              <ScalarProperty Name="RecordNum" ColumnName="question_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="SorakModel.Subject">
+              <MappingFragment StoreEntitySet="T_subjects">
+                <ScalarProperty Name="StatusCode" ColumnName="status_code" />
+                <ScalarProperty Name="QuestionCount" ColumnName="question_count" />
+                <ScalarProperty Name="EventDate" ColumnName="event_date" />
+                <ScalarProperty Name="InstanceId" ColumnName="instance_id" />
+                <ScalarProperty Name="Text" ColumnName="subject_text" />
+                <ScalarProperty Name="RecordNum" ColumnName="record_num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SorakEntities">
+        <EntityTypeShape EntityType="SorakModel.Question" Width="1.5" PointX="3.875" PointY="1.625" Height="2.4140429687499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SorakModel.User" Width="1.5" PointX="6.5" PointY="1.75" Height="1.9210009765625" />
+        <AssociationConnector Association="SorakModel.FK_T_questions_T_users">
+          <ConnectorPoint PointX="6.5" PointY="2.71050048828125" />
+          <ConnectorPoint PointX="5.375" PointY="2.71050048828125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SorakModel.T_votes" >
+          <ConnectorPoint PointX="5.375" PointY="2.1677502441406249" />
+          <ConnectorPoint PointX="6.5" PointY="2.1677502441406249" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SorakModel.Subject" Width="1.5" PointX="1.125" PointY="2.125" Height="1.592306315104167" />
+        <AssociationConnector Association="SorakModel.FK_T_questions_T_subjects" >
+          <ConnectorPoint PointX="2.625" PointY="2.9211531575520837" />
+          <ConnectorPoint PointX="3.875" PointY="2.9211531575520837" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

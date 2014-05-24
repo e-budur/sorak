@@ -1,0 +1,1239 @@
+﻿.body
+{
+    background-color: #efeee8; /*background-color: #ffffff;*/
+    font-family: arial;
+    font-size: 12px;
+    padding: 0px;
+}
+.clear
+{
+    clear: both;
+}
+.loader
+{
+    /*margin: 6px 8px 4px 8px;*/
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    
+    background-image: url('/content/images/loadingbg.png');
+}
+.loaderVisible
+{
+    visibility: visible;
+}
+.loader .bbx
+{
+    width: 73px;
+    height: 69px;
+    margin-left: 44%;
+    margin-top: 35%;
+}
+.validationMessage
+{
+    color: red;
+    position: absolute;
+    margin-left: 3px;
+}
+.loader.active
+{
+    visibility: visible;
+}
+.bgImgSettings
+{
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    min-width: 970px;
+    height: 200%;
+    z-index: -100;
+}
+.bgImgSettings img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 970px;
+    min-width: 50%;
+    min-height: 50%;
+    z-index: -100;
+}
+.login
+{
+    width: 580px;
+    height: 535px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+.loginMain
+{
+    position: absolute;
+    width: 580px;
+    height: 535px;
+    background-image: url('/content/images/LoginBg.png');
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+.loginLogo
+{
+    position: relative;
+    width: 141px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    background-image: url('/content/images/loginLogo.png');
+    background-repeat: no-repeat;
+}
+.loginDate
+{
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
+}
+.loginHeader
+{
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    font-size: 26px;
+    margin-top: 10px;
+}
+.loginHeaderSub
+{
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+.loginInfo
+{
+    text-align: center;
+    width: 100%;
+    margin-top: 65px;
+}
+.loginControl
+{
+    position: relative;
+    margin-top: 15px;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+.loginControl .text
+{
+    float: left;
+    margin-top: 5px;
+    width: 100px;
+}
+.loginControl .slace
+{
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.loginControl .inputUserName
+{
+    background-image: url(/content/images/loginUserNameIcon.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    padding-left: 20px;
+    text-align: left;
+    position: relative;
+    float: left;
+    width: 280px;
+    height: 20px;
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+}
+.loginControl .inputPassword
+{
+    background-image: url(/content/images/loginPasswordIcon.png);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    padding-left: 20px;
+    text-align: left;
+    position: relative;
+    float: left;
+    width: 280px;
+    height: 20px;
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+}
+.loginButton
+{
+    position: relative;
+    background-color: #f7bd4d; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f7bd4d), to(#dda02a));
+    background-image: -webkit-linear-gradient(top, #f7bd4d, #dda02a);
+    background-image: -moz-linear-gradient(top, #f7bd4d, #dda02a);
+    background-image: -ms-linear-gradient(top, #f7bd4d, #dda02a);
+    background-image: -o-linear-gradient(top, #f7bd4d, #dda02a);
+    background-image: linear-gradient(top, #f7bd4d, #dda02a);
+    -pie-background: linear-gradient(top, #f7bd4d, #dda02a);
+    color: #efeee9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    width: 132px;
+    height: 32px;
+    cursor: pointer;
+    float: right;
+    margin-right: 83px;
+    margin-top: 10px;
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+}
+.loginButton .text
+{
+    position: relative;
+    margin-top: 6px;
+}
+.homeContent
+{
+    width: 100%;
+}
+.homeContent .header
+{
+    position: relative;
+    height: 72px;
+    width: 100%;
+    min-width: 970px;
+    background-color: #17763e;
+    background-image: url('/content/images/header.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0px;
+    border-style: solid;
+    border-color: #0c4724;
+    border-bottom-width: 2px;
+}
+.homeContent .header .main
+{
+    width: 970px;
+    min-width: 970px;
+    margin: auto;
+}
+.homeContent .header .logo
+{
+    float: left;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.homeContent .header .title
+{
+    float: left;
+    margin-top: 28px;
+    margin-left: 180px;
+}
+.homeContent .header .userInfo
+{
+    float: right;
+    margin-top: 28px;
+}
+
+.notiTable
+{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    margin: 0;
+    text-align: center;
+    width: 330px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0px 0 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0 3px rgba(0,0,0,0.25);
+    box-shadow: 0px 0 3px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    margin-top: 43px;
+    margin-left: -155px;
+    behavior: url(/Content/PIE.htc);
+    z-index: 5;
+}
+.notiTable:after
+{
+    position: absolute;
+    display: block;
+    content: "";
+    border-color: transparent transparent #ffffff transparent;
+    border-style: solid;
+    border-width: 10px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -20px;
+    left: 160px;
+}
+.notirow
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: #d7d6d1;
+    cursor: pointer;
+}
+.notirowinside
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.notirowinside2
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+.notirow2date
+{
+    position: absolute;
+    font-size: 10px;
+    color: #cccccc;
+    margin-left: 200px;
+    margin-right: 5px;
+    margin-top: -14px;
+}
+.notirow:hover
+{
+    background-color: #f9f8f4;
+}
+.homeContent .header .userInfo .notialert
+{
+    visibility: hidden;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 26px;
+    border-radius: 50%;
+    background-color: #f8ce2a;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    behavior: url(/Content/PIE.htc);
+}
+.homeContent .header .userInfo .notialertVis
+{
+    visibility: visible;
+}
+.homeContent .header .userInfo .notification
+{
+    float: left;
+    cursor: pointer;
+}
+.homeContent .header .userInfo .username
+{
+    float: left;
+    background-image: url('/Content/images/usernameBg.png');
+    height: 30px;
+    color: #ffffff;
+    margin-left: -1px;
+    font-size: 13px;
+}
+.homeContent .header .userInfo .username .text
+{
+    margin: 5px;
+    cursor: default;
+}
+.homeContent .header .userInfo .exit
+{
+    float: left;
+    margin-left: -1px;
+    cursor: pointer;
+}
+.content
+{
+    position: relative;
+    width: 970px;
+    margin: auto;
+    margin-top: 30px;
+}
+.content .boxBg
+{
+    float: left;
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background-image: url('/Content/images/boxBgImage.png');
+    behavior: url(/Content/PIE.htc);
+    border-radius: 5px;
+}
+.content .mainBgTransportation
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #6589ad; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6589ad), to(#517aa3));
+    background-image: -webkit-linear-gradient(top, #6589ad, #517aa3);
+    background-image: -moz-linear-gradient(top, #6589ad, #517aa3);
+    background-image: -ms-linear-gradient(top, #6589ad, #517aa3);
+    background-image: -o-linear-gradient(top, #6589ad, #517aa3);
+    background-image: linear-gradient(top, #6589ad, #517aa3);
+    -pie-background: linear-gradient(top, #6589ad, #517aa3);
+    behavior: url(/Content/PIE.htc);
+}
+.content .mainBgaccommodation
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #84b5b7; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#84b5b7), to(#729fa5));
+    background-image: -webkit-linear-gradient(top, #84b5b7, #729fa5);
+    background-image: -moz-linear-gradient(top, #84b5b7, #729fa5);
+    background-image: -ms-linear-gradient(top, #84b5b7, #729fa5);
+    background-image: -o-linear-gradient(top, #84b5b7, #729fa5);
+    background-image: linear-gradient(top, #84b5b7, #729fa5);
+    -pie-background: linear-gradient(top, #84b5b7, #729fa5);
+    behavior: url(/Content/PIE.htc);
+}
+.content .mainBghealth
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #adcb3b; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#adcb3b), to(#93ac33));
+    background-image: -webkit-linear-gradient(top, #adcb3b, #93ac33);
+    background-image: -moz-linear-gradient(top, #adcb3b, #93ac33);
+    background-image: -ms-linear-gradient(top, #adcb3b, #93ac33);
+    background-image: -o-linear-gradient(top, #adcb3b, #93ac33);
+    background-image: linear-gradient(top, #adcb3b, #93ac33);
+    -pie-background: linear-gradient(top, #adcb3b, #93ac33);
+    behavior: url(/Content/PIE.htc);
+}
+.content .mainBginfo
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #ea9f29; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ea9f29), to(#d28e22));
+    background-image: -webkit-linear-gradient(top, #ea9f29, #d28e22);
+    background-image: -moz-linear-gradient(top, #ea9f29, #d28e22);
+    background-image: -ms-linear-gradient(top, #ea9f29, #d28e22);
+    background-image: -o-linear-gradient(top, #ea9f29, #d28e22);
+    background-image: linear-gradient(top, #ea9f29, #d28e22);
+    -pie-background: linear-gradient(top, #ea9f29, #d28e22);
+    behavior: url(/Content/PIE.htc);
+}
+.content .mainBgProg
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #8a8570; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#8a8570), to(#76715d));
+    background-image: -webkit-linear-gradient(top, #8a8570, #76715d);
+    background-image: -moz-linear-gradient(top, #8a8570, #76715d);
+    background-image: -ms-linear-gradient(top, #8a8570, #76715d);
+    background-image: -o-linear-gradient(top, #8a8570, #76715d);
+    background-image: linear-gradient(top, #8a8570, #76715d);
+    -pie-background: linear-gradient(top, #8a8570, #76715d);
+    behavior: url(/Content/PIE.htc);
+}
+
+.content .mainBgPhoto
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #e78965; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e78965), to(#c87c5e));
+    background-image: -webkit-linear-gradient(top, #e78965, #c87c5e);
+    background-image: -moz-linear-gradient(top, #e78965, #c87c5e);
+    background-image: -ms-linear-gradient(top, #e78965, #c87c5e);
+    background-image: -o-linear-gradient(top, #e78965, #c87c5e);
+    background-image: linear-gradient(top, #e78965, #c87c5e);
+    -pie-background: linear-gradient(top, #e78965, #c87c5e);
+    behavior: url(/Content/PIE.htc);
+}
+
+.content .mainBgSurvey
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: #e08ab0; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e08ab0), to(#bf7a97));
+    background-image: -webkit-linear-gradient(top, #e08ab0, #bf7a97);
+    background-image: -moz-linear-gradient(top, #e08ab0, #bf7a97);
+    background-image: -ms-linear-gradient(top, #e08ab0, #bf7a97);
+    background-image: -o-linear-gradient(top, #e08ab0, #bf7a97);
+    background-image: linear-gradient(top, #e08ab0, #bf7a97);
+    -pie-background: linear-gradient(top, #e08ab0, #bf7a97);
+    behavior: url(/Content/PIE.htc);
+}
+
+.content .boxBg .icon
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 81px;
+    height: 92px;
+}
+.content .boxBg .slice
+{
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    background-color: #f2f2f2;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    background-repeat: repeat-y;
+}
+.content .boxBg .texArea
+{
+    width: 90%;
+}
+.content .boxBg .texArea .iconText
+{
+    float: left;
+    margin-top: 17px;
+    margin-left: 40px;
+}
+.content .boxBg .texArea .text
+{
+    width: 150px;
+    color: #ffffff;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.boxBtn
+{
+    cursor: pointer;
+    behavior: url(/Content/PIE.htc);
+    border-radius: 5px;
+    background-image: url('/content/images/boxButtonBbg.png');
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #efeee9;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: bold;
+}
+.subMenu
+{
+    width: 100%;
+    height: 70px;
+    background-color: #505853; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#505853), to(#474e49));
+    background-image: -webkit-linear-gradient(top, #505853, #474e49);
+    background-image: -moz-linear-gradient(top, #505853, #474e49);
+    background-image: -ms-linear-gradient(top, #505853, #474e49);
+    background-image: -o-linear-gradient(top, #505853, #474e49);
+    background-image: linear-gradient(top, #505853, #474e49);
+    -pie-background: linear-gradient(top, #505853, #474e49);
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem
+{
+    width: 970px;
+    height: 70px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.menuItem .slice
+{
+    float: left;
+    background-image: url('/content/images/submenuSlice.png');
+    width: 5px;
+    height: 70px;
+}
+.menuItem .item1
+{
+    background-image: url('/content/images/submenuTrans.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item2
+{
+    background-image: url('/content/images/submenuCommodation.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item3
+{
+    background-image: url('/content/images/submenuHealth.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item4
+{
+    background-image: url('/content/images/submenuInfo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item5
+{
+    background-image: url('/content/images/submenuProg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item6
+{
+    background-image: url('/content/images/submenuPhoto.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item6p
+{
+    background-image: url('/content/images/photoIconPassive.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item7
+{
+    background-image: url('/content/images/submenuSurvey.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+.menuItem .item7p
+{
+    background-image: url('/content/images/surveyIconPassive.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    height: 70px;
+    width: 132.8px;
+}
+
+.menuItem .item1:hover
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuTransH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item2:hover
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuCommodationH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item3:hover
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuHealthH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item4:hover
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuInfoH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item5:hover
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuProgH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item6:hover
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuPhotoH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item7:hover
+{
+    position: relative;
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuSurveyH.png');
+    behavior: url(/Content/PIE.htc);
+}
+
+
+
+/***/
+.item1x
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    behavior: url(/Content/PIE.htc);
+}
+.item1y
+{
+    background-image: url('/content/images/submenuTransH.png');
+}
+.item2x
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuCommodationH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item3x
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuHealthH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item4x
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuInfoH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item5x
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuProgH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item6x
+{
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuPhotoH.png');
+    behavior: url(/Content/PIE.htc);
+}
+.menuItem .item7x
+{
+    position: relative;
+    background-color: #424945; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#373c39), to(#373c39));
+    background-image: -webkit-linear-gradient(top, #424945, #373c39);
+    background-image: -moz-linear-gradient(top, #424945, #373c39);
+    background-image: -ms-linear-gradient(top, #424945, #373c39);
+    background-image: -o-linear-gradient(top, #424945, #373c39);
+    background-image: linear-gradient(top, #424945, #373c39);
+    -pie-background: linear-gradient(top, #424945, #373c39);
+    background-image: url('/content/images/submenuSurveyH.png');
+    behavior: url(/Content/PIE.htc);
+}
+
+.mainCover
+{
+    width: 970px;
+    border-radius: 5px;
+    padding: 5px;
+    background-image: url('/Content/images/boxBgImage.png');
+    behavior: url(/Content/PIE.htc);
+}
+.mainCoverInner
+{
+    width: 100%;
+    background-color: #f3f3f2;
+}
+.mainCoverInner .textAreaCover
+{
+    color: #666666;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.mainCoverInner .textAreaCover .title
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+.mainCoverInner .textAreaCover .explan
+{
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.plaincover
+{
+    margin-top: 30px;
+}
+.plaincover .left
+{
+    width: 48%;
+    float: left;
+}
+.plaincover .header
+{
+    width: 48%;
+    color: #3256bc;
+    font-size: 16px;
+    float: left;
+    font-weight: bold;
+}
+.plaincover .headerRight
+{
+    width: 48%;
+    color: #c44e4e;
+    font-size: 16px;
+    float: right;
+    font-weight: bold;
+}
+.plaincover .icon
+{
+    float: left;
+}
+.plaincover .text
+{
+    margin-top: 2px;
+    margin-left: 2px;
+    float: left;
+}
+
+
+.plaincover .right
+{
+    width: 48%;
+    float: right;
+}
+
+.plainHeader
+{
+    margin-top: 17px;
+    color: #666666;
+    font-size: 13px;
+}
+.plainTable
+{
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #d4d3ce;
+    border-radius: 3px 3px 0px 0px;
+    behavior: url(/Content/PIE.htc);
+}
+.plainTable .tableHeader
+{
+    color: #666666;
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+    background-color: #f0efed;
+    height: 28px;
+    width: 100%;
+}
+.plainTable .tableRow
+{
+    color: #666666;
+    font-size: 13px;
+    position: relative;
+    background-color: #ffffff;
+    height: 28px;
+    width: 100%;
+    border: 0px;
+    border-top-width: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d4d3ce;
+}
+
+.checkAvaible
+{
+    margin-top: 10px;
+}
+.checkAvaible .flightTo
+{
+    float: left;
+    width: 48%;
+}
+.checkAvaible .flightFrom
+{
+    float: right;
+    width: 48%;
+}
+.checkTo
+{
+    float: left;
+}
+.textTo
+{
+    margin-left: 3px;
+    margin-top: 2px;
+    float: left;
+    color: #666666;
+    font-weight: normal;
+    font-size: 12px;
+}
+.btnSendPassive
+{
+    position: relative;
+    color: #efeee9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+    width: 130px;
+    height: 30px;
+    float: right;
+    cursor: pointer;
+    background-color: #c0c2c0;
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+}
+.btnSendPassive .text
+{
+    margin-top: 5px;
+}
+.btnSendActive
+{
+    background-color: #4f5752; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#4f5752), to(#49514c));
+    background-image: -webkit-linear-gradient(top, #4f5752, #49514c);
+    background-image: -moz-linear-gradient(top, #4f5752, #49514c);
+    background-image: -ms-linear-gradient(top, #4f5752, #49514c);
+    background-image: -o-linear-gradient(top, #4f5752, #49514c);
+    background-image: linear-gradient(top, #4f5752, #49514c);
+    -pie-background: linear-gradient(top, #4f5752, #49514c);
+    behavior: url(/Content/PIE.htc);
+}
+.notes
+{
+    margin-top: 20px;
+    color: #666666;
+}
+.notes .notesTitle
+{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.notes .note
+{
+    font-size: 13px;
+    margin-top:10px;
+}
+.request
+{
+    padding: 5px;
+    position: relative;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dad9d5;
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+}
+.request .text
+{
+    float: left;
+}
+.request .statu
+{
+    margin-top: 1px;
+    font-size: 10px;
+    color: #62a545;
+    float: right;
+    margin-right: 10px;
+}
+.request .btnCancelRequest
+{
+    cursor: pointer;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+    background-color: #c14d4d; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#c14d4d), to(#ad4545));
+    background-image: -webkit-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: -moz-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: -ms-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: -o-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: linear-gradient(top, #c14d4d, #ad4545);
+    -pie-background: linear-gradient(top, #c14d4d, #ad4545);
+    behavior: url(/Content/PIE.htc);
+    float: right;
+    color: #ffffff;
+    font-size: 10px;
+}
+.btnAccept
+{
+    position: relative;
+    color: #efeee9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 6px;
+    float: right;
+    cursor: pointer;
+    background-color: #0d8e40; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0d8e40), to(#0c7f39));
+    background-image: -webkit-linear-gradient(top, #0d8e40, #0c7f39);
+    background-image: -moz-linear-gradient(top, #0d8e40, #0c7f39);
+    background-image: -ms-linear-gradient(top, #0d8e40, #0c7f39);
+    background-image: -o-linear-gradient(top, #0d8e40, #0c7f39);
+    background-image: linear-gradient(top, #0d8e40, #0c7f39);
+    -pie-background: linear-gradient(top, #0d8e40, #0c7f39);
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+}
+.btnDecl
+{
+    position: relative;
+    color: #efeee9;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 6px;
+    float: right;
+    cursor: pointer;
+    background-color: #c14d4d; /* color guide - sayfa 6 */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#c14d4d), to(#ad4545));
+    background-image: -webkit-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: -moz-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: -ms-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: -o-linear-gradient(top, #c14d4d, #ad4545);
+    background-image: linear-gradient(top, #c14d4d, #ad4545);
+    -pie-background: linear-gradient(top, #c14d4d, #ad4545);
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+}
+.hform
+{
+    margin-top: 15px;
+}
+.hform .hformQ
+{
+    font-size: 13px;
+    color: #666666;
+    width: 50%;
+}
+ .option
+{
+    float: left;
+}
+.option input
+{
+    float: left;
+}
+.option .text
+{
+    float: left;
+    margin-left: 5px;
+    margin-top: -1px;
+}
+.hform .hformQ .textareaProp
+{
+    width: 90%;
+    resize: none;
+    font-size: 13px;
+    color: #666666;
+    margin-top: 5px;
+}
+.imageArea
+{
+    margin-top: 10px;
+}
+.imageArea .leftImage
+{
+    float: left;
+}
+.imageArea .RightImages
+{
+    float: right;
+}
+.imageArea .image
+{
+    float: right;
+}
+.middle
+{
+    background-image: url('/Content/images/boxBgImage.png');
+    width: 3px;
+    height: 280px;
+    float: left;
+}
+.phone
+{
+    font-weight: normal;
+    margin-left: 200px;
+}
+.disabledx
+{
+    background-color: #cbcbcb;
+    border-radius: 5px;
+    behavior: url(/Content/PIE.htc);
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 270px;
+    height: 270px;
+}
+.row1
+{
+    cursor:pointer;
+    }
+    .row1:hover
+    {
+        color:#62a545;
+    }
+    
+    
+ .img-circular{
+ width: 75px;
+ height: 75px;
+
+ display: block;
+ border-radius: 37px;
+ -webkit-border-radius: 37px;
+ -moz-border-radius: 37px;
+ background-position: center;
+ behavior: url(/Content/PIE.htc);+
+
+}
+
+.whiteSpace
+{
+      border-color: transparent transparent #cccccc transparent;
+    border-style: solid;
+    }

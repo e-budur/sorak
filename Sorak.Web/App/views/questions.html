@@ -1,0 +1,68 @@
+﻿<section class="content">
+     <div class="mainCover">    
+  
+        <div class="mainCoverInner" >
+            <div class="textAreaCover" >
+            <div class="title" style="color:#62a545;font-size: 16px;">Sorular</div>  
+           
+                 <div data-bind="foreach:questions">
+                       <div style="margin-top:10px;">
+                   
+                              <div style="position:absolute;margin-top:0px;margin-left:-20px;"  class="img-circular" data-bind="style: { backgroundImage: 'url(\'' + ownerPhotoUrl + '\')'}"></div>
+
+                              <div class="whiteSpace" style="width:830px;background-color:#ffffff;height:70px;margin-left:10px;">
+
+                                  <div style="float:left;width:700px;border-radious:5px;margin-left:50px;color:666666;margin-top:5px;" data-bind="text:text"></div>
+                                                                                       <div style="float:left;font-weight:bold;font-size:10px; position:absolute;margin-top:50px;color:#666666;margin-left:50px;" data-bind="text:ownerFullname"></div>
+                                
+                                  <div style="float:right;margin-right:10px;margin-top:13px;width:70px;" >
+                                        <!-- ko if:isLiked == false -->
+                                        <div>
+                                       <!-- <div style="float:left;margin-right:10px;margin-top:4px;font-weight:bold;"> Beğen ? </div>-->
+                                        <img data-bind="click:$root.qlike"  class="likeImgSelected" style="cursor:pointer;float:left;margin-top:14px;"  src="../../content/images/icon_videoDetail_likeCount.png"/></div>
+                                          <!-- /ko -->
+                                           <!-- ko if:isLiked == true-->
+                                       <!-- <div style="float:left;margin-right:10px;margin-top:4px;font-weight:bold;"> VazGeç ? </div>-->
+                                        <img data-bind="click:$root.unLike"  class="likeImgSelected" style="cursor:pointer;float:left;margin-top:14px;" src="/Content/images/icon_videoDetail_likeCount_Selected.png"/>
+                                        <!-- /ko -->
+                                        <div style="float:left;margin-top:14px;margin-left:5px" >( <a style="margin-top:14px;    text-decoration:none; " data-bind ="text:likeCount"></a> )</div>
+                                        <div class="clear"></div>
+                                                                         
+                                  </div>
+
+                              </div>
+                    
+                        </div>
+                </div>
+                       
+            </div>
+            
+        </div>
+
+           <div class="mainCoverInner" style="margin-top:5px;">
+                <div class="textAreaCover" >
+                  <div class="title" style="color:#62a545;font-size: 16px;">Yeni Soru Ekle</div>
+                  <textarea style="width:820px;margin-top:10px;" id="question"data-bind=" event: { keyup: afterkeydown }"></textarea>
+
+                    <br/>
+                    <span data-bind="text: count"></span> karakter​​​​​​​ kaldı.
+                       <div style="margin-top:5px;">
+                    <div  class="btnAccept"  data-bind="click:insertQuestion" style="float: right;width:100px;margin-bottom:10px;margin-right:12px;">
+                                <div  class="text"  > Soru Ekle </div>
+                                </div>
+                                <div class="clear"></div>
+                </div>
+            </div>
+             
+          
+             
+            
+        </div>
+        
+
+
+
+       
+  
+    
+</section>

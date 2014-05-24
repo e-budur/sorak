@@ -1,0 +1,24 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorak</title>
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+
+    @Styles.Render("~/Content/css")
+   
+</head>
+<body>
+    <div id="applicationHost">
+      
+    </div>
+
+    @Scripts.Render("~/scripts/vendor")
+	<script src="~/Scripts/require.js" data-main="@Url.Content("~/App/main")"></script>
+</body>
+</html>

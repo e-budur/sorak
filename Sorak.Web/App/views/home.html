@@ -1,0 +1,61 @@
+﻿<section class="content">
+     <div class="mainCover">    
+  
+        <div class="mainCoverInner" >
+            <div class="textAreaCover" >
+            <div class="title" style="color:#62a545;font-size: 16px;">Toplantı Seçimi</div>  
+           
+                  <table id="Table3" class="plainTable" >
+                            <tr class="tableHeader">                            
+                       <td width="20%">Tarih</td>
+                                <td width="60%">
+                                   Toplantı Adı
+                                </td>
+                                <td width="20%">
+                                Sorulan Soru Sayısı
+                                </td>
+                                
+                            </tr>
+                         <tbody id="serviceList" data-bind="foreach:topics()">
+                            <tr class="tableRow row1" data-bind="click:$root.goQuestions">
+                                <td><b data-bind="text:date"></b></td>
+                                <td valign="top"  style="padding:5px;" data-bind="text:text" >
+
+                                </td>
+                                <td  valign="top"  style="padding-right:20px;" data-bind="text:questionCount">
+                                
+                                </td>                     
+                                
+                               
+                            </tr> 
+                          
+                            </tbody>                   
+                        </table>
+                    
+                        <div class="clear"></div>
+            </div>
+            
+        </div>
+             
+            <div class="mainCoverInner"style="margin-top:5px;" >
+                <div class="textAreaCover" >            
+                 <div class="notes">
+                    <div class="notesTitle"><b>Neler yapabilirisiniz</b></div>
+                    <div class="note">• Hüsnü Bey ile yapılan sohbet toplantılarına katılamasanızda sorularınızı bu site üzerinden iletebilirsiniz.</div>
+                    <div class="note">• İletilen soruları oylayarak en popüler soruların belirlenmesine katkı sağlayabilirsiniz.</div>
+                    <div class="note">• Her çalışanın her soruyu 1 kere oylama hakkı var. Verdiğiniz oyu dilediğiniz zaman aynı butona tıklayarak geri alabilirsiniz.</div>
+                    <div class="note">• SMS ifadesi soruların 160 karakterle sınırlı olmasından ileri geliyor.  Gerçek anlamda SMS gitmeyecek.</div>
+                </div>	       
+            </div>
+
+             
+            
+        </div>
+        
+
+
+
+       
+    </div>
+    
+</section>
