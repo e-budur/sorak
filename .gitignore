@@ -27,7 +27,6 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *.vssscc
 $tf*/
-*.dll
 Sorak.Publish/
 Sorak.Video.ExternalServices/
 *.snk
