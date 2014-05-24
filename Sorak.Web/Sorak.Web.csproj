@@ -189,12 +189,6 @@
     <Content Include="content\images\boxBgImage.png" />
     <Content Include="content\images\btnExit.png" />
     <Content Include="content\images\btnNotification.png" />
-    <Content Include="content\images\employee_photos\1738.jpg" />
-    <Content Include="content\images\employee_photos\emrah_budur.jpg" />
-    <Content Include="content\images\employee_photos\hakan_gulap.jpg" />
-    <Content Include="content\images\employee_photos\kaan_seyitogullari.jpg" />
-    <Content Include="content\images\employee_photos\reha_diri.jpg" />
-    <Content Include="content\images\employee_photos\tuba_cermis.jpg" />
     <Content Include="content\images\employee_photos\unisex_profile.png" />
     <Content Include="content\images\glyphicons-halflings-white.png" />
     <Content Include="content\images\glyphicons-halflings.png" />
