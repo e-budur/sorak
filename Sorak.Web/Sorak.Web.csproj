@@ -234,6 +234,7 @@
     <Content Include="Scripts\durandal\viewLocator.js" />
     <Content Include="Scripts\es5-sham.js" />
     <Content Include="Scripts\es5-shim.js" />
+    <Content Include="Scripts\fb.js" />
     <Content Include="Scripts\jquery-1.8.3.js" />
     <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />

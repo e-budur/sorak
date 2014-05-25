@@ -1,5 +1,6 @@
 ﻿// Maps the files so Durandal knows where to find these.
 require.config({
+    
     paths: {
         'text': '../Scripts/text',
         'durandal': '../Scripts/durandal',
@@ -8,6 +9,7 @@ require.config({
     }
 });
 
+require(['fb']);
  
 define('jquery', function () { return jQuery; });
 define('knockout', ko);

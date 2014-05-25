@@ -12,6 +12,7 @@
 
         //#region Internal Methods
         function activate() {
+
             datacontext.getCurrenUser(userInfo).then(function () {
                 var a = 1;
             });
