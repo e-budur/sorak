@@ -19,7 +19,9 @@ namespace Sorak.Web.Controllers
         [HttpGet]
         public string Metadata()
         {
-            return _contextProvider.Metadata();
+            var metadata = _contextProvider.Metadata();
+
+            return metadata;
         }
 
         [HttpGet]
